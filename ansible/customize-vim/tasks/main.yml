@@ -1,0 +1,11 @@
+---
+- name: "Install Tmux"
+  apt: 
+    name: vim
+    state: present
+  become: true
+  become_method: sudo
+- name: "Copy VimRC"
+  copy: 
+    src: "{{ role_path }}/files/vimrc"
+    dest: "{{ ansible_env.HOME }}/.vimrc"

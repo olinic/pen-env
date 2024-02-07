@@ -1,0 +1,19 @@
+---
+- name: "Install Go"
+  apt: 
+    name: golang-go
+    state: present
+  become: true
+  become_method: sudo
+- name: "Install Git"
+  apt: 
+    name: git
+    state: present
+  become: true
+  become_method: sudo
+- name: "Install GitHub"
+  apt: 
+    name: gh
+    state: present
+  become: true
+  become_method: sudo

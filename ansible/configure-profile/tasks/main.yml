@@ -1,0 +1,11 @@
+---
+- name: "Copy .zshrc"
+  copy:
+    backup: true
+    src: "{{ role_path }}/files/zshrc"
+    dest: "{{ ansible_env.HOME }}/.zshrc"
+- name: "Copy terminal settings"
+  copy:
+    backup: true
+    src: "{{ role_path }}/files/qterminal.ini"
+    dest: "{{ ansible_env.HOME }}/.config/qterminal.org/qterminal.ini"

@@ -1,0 +1,16 @@
+# Helpful links:
+# https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html
+---
+- name: "Customize PenBox"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: "Demo Debug"
+      debug:
+        msg: "{{ ansible_env.HOME }}"
+  roles:
+    - role: "configure-profile"
+    - role: "configure-tmux"
+    - role: "customize-vim"
+    - role: "coding"
+    - role: "netexec"
