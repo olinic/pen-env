@@ -1,0 +1,7 @@
+---
+- name: "Install OWASP ZAP"
+  apt: 
+    name: zaproxy
+    state: present
+  become: true
+  become_method: sudo
