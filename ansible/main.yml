@@ -15,3 +15,5 @@
     - role: "coding"
     - role: "netexec"
     - role: "zap"
+    - role: "password-tools"
+    - role: "scan-tools"

@@ -1,0 +1,9 @@
+---
+- name: "Install pip"
+  apt: 
+    name: python3-pip
+    state: present
+  become: true
+  become_method: sudo
+- name: "Install creds"
+  command: pip3 install defaultcreds-cheat-sheet

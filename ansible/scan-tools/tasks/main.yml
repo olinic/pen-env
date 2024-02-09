@@ -1,0 +1,7 @@
+---
+- name: "Install GVM for OpenVAS"
+  apt: 
+    name: gvm
+    state: present
+  become: true
+  become_method: sudo
