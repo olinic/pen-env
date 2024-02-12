@@ -17,3 +17,4 @@
     - role: "zap"
     - role: "password-tools"
     - role: "scan-tools"
+    - role: "file-transfer-tools"

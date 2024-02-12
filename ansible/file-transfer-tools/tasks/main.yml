@@ -1,0 +1,5 @@
+---
+- name: "Install pyftpdlib"
+  command: pip3 install pyftpdlib
+  become: true
+  become_method: sudo
