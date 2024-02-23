@@ -7,3 +7,9 @@
   become_method: sudo
 - name: "Install creds"
   command: pip3 install defaultcreds-cheat-sheet
+- name: "Install seclists"
+  apt: 
+    name: seclists
+    state: present
+  become: true
+  become_method: sudo

@@ -3,3 +3,11 @@
   command: pip3 install pyftpdlib
   become: true
   become_method: sudo
+- name: "Install uploadserver"
+  command: pip3 install uploadserver
+  become: true
+  become_method: sudo
+- name: "Install SMB WebDav Tools"
+  command: pip3 install wsgidav cheroot
+  become: true
+  become_method: sudo
