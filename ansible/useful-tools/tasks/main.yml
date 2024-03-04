@@ -1,0 +1,7 @@
+---
+- name: "Install xxd (hex encoder/decoder)"
+  apt: 
+    name: xxd
+    state: present
+  become: true
+  become_method: sudo
