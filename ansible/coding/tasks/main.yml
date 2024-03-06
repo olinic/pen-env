@@ -1,4 +1,18 @@
 ---
+- name: "Install Snapd"
+  apt: 
+    name: snapd
+    state: present
+  become: true
+  become_method: sudo
+- name: "Start Snap Service"
+  command: systemctl start snapd.service
+  become: true
+  become_method: sudo
+- name: "Install VSCode"
+  command: snap install code --classic
+  become: true
+  become_method: sudo
 - name: "Install Go"
   apt: 
     name: golang-go
