@@ -18,3 +18,4 @@
     - role: "password-tools"
     - role: "scan-tools"
     - role: "file-transfer-tools"
+    - role: "useful-tools"
