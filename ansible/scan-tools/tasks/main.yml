@@ -5,3 +5,9 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install feroxbuster"
+  apt: 
+    name: feroxbuster
+    state: present
+  become: true
+  become_method: sudo
