@@ -5,27 +5,9 @@
     state: present
   become: true
   become_method: sudo
-- name: "Create Nishang Directory"
-  ansible.builtin.file:
-    path: /usr/share/nishang
-    state: directory
-    mode: '0755'
-  become: true
-  become_method: sudo
-- name: "Download Nishang"
-  ansible.builtin.get_url:
-    url: https://github.com/samratashok/nishang/archive/refs/heads/master.zip
-    dest: /usr/share/nishang/master.zip
-    mode: '0440'
-  become: true
-  become_method: sudo
-- name: "Unzip Nishang"
-  command: unzip /usr/share/nishang/master.zip -d /usr/share/nishang 
-  become: true
-  become_method: sudo
-- name: "Cleanup Nishang Zip"
-  ansible.builtin.file:
-    path: /usr/share/nishang/master.zip
-    state: absent
+- name: "Install Nishang"
+  apt: 
+    name: nishang
+    state: present
   become: true
   become_method: sudo
