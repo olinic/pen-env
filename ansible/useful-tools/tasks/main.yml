@@ -11,3 +11,5 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install git-dumper"
+  command: pip install git-dumper
