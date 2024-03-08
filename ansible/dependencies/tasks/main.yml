@@ -1,0 +1,14 @@
+---
+# tasks file for dependencies
+- name: "Install pip"
+  apt: 
+    name: python3-pip
+    state: present
+  become: true
+  become_method: sudo
+- name: "Install Git"
+  apt: 
+    name: git
+    state: present
+  become: true
+  become_method: sudo

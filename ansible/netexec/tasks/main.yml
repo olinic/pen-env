@@ -5,30 +5,9 @@
     state: present
   become: true
   become_method: sudo
-- name: Check for netexec
-  stat:
-    path: ~/.local/bin/netexec
-  register: netexec_check
-- name: "Save install status of netexec"
-  set_fact:
-    netexec_installed: netexec_check.stat.exists
-#- name: "Get install status of netexec"
-#  command: which netexec
-#  register: netexec_status
-#  ignore_errors: yes
-#- name: "Save install status of netexec"
-#  set_fact:
-#    netexec_installed: netexec_status.rc == 0
-- name: "Install git"
-  apt: 
-    name: git
-    state: present
-  become: true
-  become_method: sudo
-  when: not netexec_installed
 - name: "Update PATH"
   command: pipx ensurepath
-  when: not netexec_installed
-- name: "Install"
-  command: pipx install git+https://github.com/Pennyw0rth/NetExec
-  when: not netexec_installed
+- name: "Install netexec"
+  community.general.pipx:
+    name: tox
+    source: git+https://github.com/Pennyw0rth/NetExec

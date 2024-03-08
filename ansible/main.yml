@@ -12,6 +12,7 @@
       ansible.builtin.debug:
         msg: For first time install, finish installing tmux logging plugin. Enter tmux and execute [Prefix + I].
   roles:
+    - role: "dependencies"
     - role: "configure-profile"
     - role: "configure-tmux"
     - role: "customize-vim"
