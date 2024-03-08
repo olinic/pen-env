@@ -5,9 +5,12 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: "Demo Debug"
-      debug:
-        msg: "{{ ansible_env.HOME }}"
+    #- name: "Demo Debug"
+    #  debug:
+    #    msg: "{{ ansible_env.HOME }}"
+    - name: Tmux Next Steps
+      ansible.builtin.debug:
+        msg: For first time install, finish installing tmux logging plugin. Enter tmux and execute [Prefix + I].
   roles:
     - role: "configure-profile"
     - role: "configure-tmux"
