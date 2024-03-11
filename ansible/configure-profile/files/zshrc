@@ -261,7 +261,7 @@ fi
 export PATH="$PATH:/home/ko/.local/bin:/snap/bin"
 
 alias setupdir='mkdir -p {Admin,Deliverables,Evidence/{Findings,Scans/{Vuln,Service,Web,AD_Enumeration},Notes,OSINT,Wireless,Logging},Retest}'
-alias tfastnmap='nmap -F -sC -sV -oA tcp-fast'
-alias tallnmap='nmap -p- -oA tcp-fast'
-alias ufastnmap='nmap -F -sU -sC -sV -oA udp-fast'
-alias uallnmap='nmap -p- -oA udp-fast'
+alias tfastnmap='sudo nmap -F -sC -sV -oA tcp-fast'
+alias tallnmap='sudo nmap -p- -oA tcp-fast'
+alias ufastnmap='sudo nmap -F -sU -sC -sV -oA udp-fast'
+alias uallnmap='sudo nmap -p- -oA udp-fast'
