@@ -22,4 +22,5 @@
     - role: "password-tools"
     - role: "scan-tools"
     - role: "file-transfer-tools"
+    - role: "exploit-tools"
     - role: "useful-tools"
