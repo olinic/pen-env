@@ -11,3 +11,9 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install enum4linux-ng"
+  apt: 
+    name: enum4linux-ng
+    state: present
+  become: true
+  become_method: sudo
