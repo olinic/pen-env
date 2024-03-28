@@ -17,3 +17,9 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install gobuster"
+  apt: 
+    name: gobuster
+    state: present
+  become: true
+  become_method: sudo
