@@ -1,0 +1,8 @@
+---
+# tasks file for pivoting
+- name: "Install sshuttle"
+  apt: 
+    name: sshuttle
+    state: present
+  become: true
+  become_method: sudo

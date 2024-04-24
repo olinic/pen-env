@@ -24,3 +24,4 @@
     - role: "file-transfer-tools"
     - role: "exploit-tools"
     - role: "useful-tools"
+    - role: "pivoting"
