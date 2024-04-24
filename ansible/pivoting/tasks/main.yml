@@ -6,3 +6,12 @@
     state: present
   become: true
   become_method: sudo
+- name: Install Dnscat2
+  apt: 
+    name: 
+      - dnscat2
+      - dnscat2-client
+      - dnscat2-server
+    state: present
+  become: true
+  become_method: sudo
