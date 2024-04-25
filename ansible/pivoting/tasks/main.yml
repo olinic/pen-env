@@ -6,18 +6,9 @@
     state: present
   become: true
   become_method: sudo
-- name: "Install Chisel"
-  ansible.builtin.git:
-    repo: https://github.com/jpillora/chisel.git
-    dest: /usr/share/chisel
-    single_branch: yes
-    version: master
-    force: true
-  become: true
-  become_method: sudo
-- name: "Build Chisel"
-  ansible.builtin.shell: sudo make build windows linux DIR=./release
-  args:
-    chdir: /usr/share/chisel
+- name: "Install chisel"
+  apt: 
+    name: chisel
+    state: present
   become: true
   become_method: sudo
