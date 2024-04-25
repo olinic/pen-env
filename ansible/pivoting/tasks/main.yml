@@ -1,5 +1,11 @@
 ---
 # tasks file for pivoting
+- name: "Install proxychains"
+  apt: 
+    name: proxychains
+    state: present
+  become: true
+  become_method: sudo
 - name: "Install sshuttle"
   apt: 
     name: sshuttle
@@ -10,5 +16,25 @@
   apt: 
     name: chisel
     state: present
+  become: true
+  become_method: sudo
+- name: "Install autoconf for ptunnel-ng"
+  apt: 
+    name: autoconf
+    state: present
+  become: true
+  become_method: sudo
+- name: "Install ptunnel-ng"
+  ansible.builtin.git:
+    repo: https://github.com/utoni/ptunnel-ng.git
+    dest: /usr/share/ptunnel-ng
+    single_branch: yes
+    version: master
+  become: true
+  become_method: sudo
+- name: "Setup ptunnel-ng"
+  ansible.builtin.shell: sudo ./autogen.sh
+  args:
+    chdir: /usr/share/ptunnel-ng
   become: true
   become_method: sudo

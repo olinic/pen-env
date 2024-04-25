@@ -17,6 +17,7 @@
     - role: "configure-tmux"
     - role: "customize-vim"
     - role: "coding"
+    - role: "pivoting"
     - role: "netexec"
     - role: "zap"
     - role: "password-tools"
@@ -24,4 +25,3 @@
     - role: "file-transfer-tools"
     - role: "exploit-tools"
     - role: "useful-tools"
-    - role: "pivoting"
