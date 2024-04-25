@@ -6,12 +6,18 @@
     state: present
   become: true
   become_method: sudo
-- name: Install Dnscat2
-  apt: 
-    name: 
-      - dnscat2
-      - dnscat2-client
-      - dnscat2-server
-    state: present
+- name: "Install Chisel"
+  ansible.builtin.git:
+    repo: https://github.com/jpillora/chisel.git
+    dest: /usr/share/chisel
+    single_branch: yes
+    version: master
+    force: true
+  become: true
+  become_method: sudo
+- name: "Build Chisel"
+  ansible.builtin.shell: sudo make build windows linux DIR=./release
+  args:
+    chdir: /usr/share/chisel
   become: true
   become_method: sudo
