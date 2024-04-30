@@ -2,7 +2,7 @@
 # tasks file for pivoting
 - name: "Install proxychains"
   apt: 
-    name: proxychains
+    name: proxychains4
     state: present
   become: true
   become_method: sudo
@@ -29,6 +29,7 @@
     repo: https://github.com/utoni/ptunnel-ng.git
     dest: /usr/share/ptunnel-ng
     single_branch: yes
+    force: true
     version: master
   become: true
   become_method: sudo
