@@ -1,0 +1,7 @@
+---
+- name: "Install hurl"
+  apt: 
+    name: hurl
+    state: present
+  become: true
+  become_method: sudo

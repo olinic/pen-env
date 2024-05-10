@@ -1,6 +1,6 @@
 ---
 # tasks file for pivoting
-- name: "Install proxychains"
+- name: "Install proxychains v4"
   apt: 
     name: proxychains4
     state: present
