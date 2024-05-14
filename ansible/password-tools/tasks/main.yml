@@ -8,3 +8,9 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install CUPP"
+  apt: 
+    name: cupp
+    state: present
+  become: true
+  become_method: sudo
