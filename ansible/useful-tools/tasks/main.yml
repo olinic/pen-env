@@ -13,3 +13,18 @@
   become_method: sudo
 - name: "Install git-dumper"
   command: pip install git-dumper
+- name: "Install bashfuscator"
+  ansible.builtin.git:
+    repo: https://github.com/Bashfuscator/Bashfuscator.git
+    dest: /usr/share/bashfuscator
+    single_branch: yes
+    force: true
+    version: master
+  become: true
+  become_method: sudo
+- name: "Setup bashfuscator"
+  ansible.builtin.shell: pip3 install setuptools && python3 setup.py install
+  args:
+    chdir: /usr/share/bashfuscator
+  become: true
+  become_method: sudo
