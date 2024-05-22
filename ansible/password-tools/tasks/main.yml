@@ -14,3 +14,12 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install Username Anarchy"
+  ansible.builtin.git:
+    repo: https://github.com/urbanadventurer/username-anarchy.git
+    dest: /usr/share/username-anarchy
+    single_branch: yes
+    force: true
+    version: master
+  become: true
+  become_method: sudo
