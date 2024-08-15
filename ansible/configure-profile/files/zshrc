@@ -260,7 +260,8 @@ fi
 # Created by `pipx` on 2024-02-02 20:02:37
 export PATH="$PATH:/home/ko/.local/bin:/snap/bin"
 
-alias setupdir='mkdir -p {admin,deliverables,evidence/{findings,scans/{vuln,service,web,AD-enumeration,nmap},notes,OSINT,wireless,logging},retest}'
+alias setupdir='mkdir -p {scope,points-of-contact,loot,discovery/{scans,live-hosts},app-enumeration/{scans,interesting-hosts},exploitation,post-exploitation}'
+alias setupdir2='mkdir -p {admin,deliverables,evidence/{findings,scans/{vuln,service,web,AD-enumeration,nmap},notes,OSINT,wireless,logging},retest}'
 alias tfastnmap='sudo nmap -F -sC -sV -oA tcp-fast'
 alias tallnmap='sudo nmap -p- -oA tcp-all'
 alias ufastnmap='sudo nmap -F -sU --min-rate 500 -oA udp-fast'

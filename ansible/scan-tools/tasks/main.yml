@@ -23,3 +23,9 @@
     state: present
   become: true
   become_method: sudo
+- name: "Install EyeWitness"
+  apt: 
+    name: eyewitness
+    state: present
+  become: true
+  become_method: sudo
