@@ -29,3 +29,28 @@
     state: present
   become: true
   become_method: sudo
+- name: "Setup Aquatone Dir"
+  file:
+    path: /usr/share/aquatone
+    state: directory
+  become: true
+  become_method: sudo
+- name: "Download Aquatone"
+  ansible.builtin.get_url:
+    url: "https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip"
+    dest: /usr/share/aquatone
+  become: true
+  become_method: sudo
+- name: "Unzip Aquatone"
+  ansible.builtin.unarchive:
+    src: /usr/share/aquatone/aquatone_linux_amd64_1.7.0.zip
+    dest: /usr/share/aquatone
+  become: true
+  become_method: sudo
+- name: "Setup Aquatone Symlink"
+  file:
+    src: /usr/share/aquatone/aquatone
+    dest: /usr/local/bin/aquatone
+    state: link
+  become: true
+  become_method: sudo
